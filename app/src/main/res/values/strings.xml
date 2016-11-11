@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MaterialNews</string>
+    <string name="app_version">V </string>
+    <string name="wele_copyright">Copyright &#169; 2016 MaterialNews All Rights Reserved\nPowered by hyr</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">HelDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDlo blank fragment</string>
+</resources>
