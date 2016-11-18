@@ -45,26 +45,29 @@ public class LoadingViewHelper implements ILoadingViewHelper {
         currentView = view;
 
 
-}
+    }
 
 
-    @Override public View getCurrentLayout() {
+    @Override
+    public View getCurrentLayout() {
         return currentView;
     }
 
 
-    @Override public void restoreView() {
+    @Override
+    public void restoreView() {
         showLayout(view);
     }
 
 
-    @Override public void showLayout(View view) {
+    @Override
+    public void showLayout(View view) {
 
         if (null == parentView) {
             init();
         }
 
-        this.currentView = view ;
+        this.currentView = view;
 
         // 如果已经是那个view，那就不需要再进行替换操作了
         if (parentView.getChildAt(viewIndex) != view) {
@@ -79,17 +82,20 @@ public class LoadingViewHelper implements ILoadingViewHelper {
     }
 
 
-    @Override public View inflate(int layoutId) {
+    @Override
+    public View inflate(int layoutId) {
         return LayoutInflater.from(view.getContext()).inflate(layoutId, null);
     }
 
 
-    @Override public Context getContext() {
+    @Override
+    public Context getContext() {
         return view.getContext();
     }
 
 
-    @Override public View getView() {
+    @Override
+    public View getView() {
         return view;
     }
 }

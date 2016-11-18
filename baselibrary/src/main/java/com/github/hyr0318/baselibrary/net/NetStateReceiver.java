@@ -4,7 +4,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+
 import com.orhanobut.logger.Logger;
+
 import java.util.ArrayList;
 
 /**
@@ -16,14 +18,14 @@ import java.util.ArrayList;
 public class NetStateReceiver extends BroadcastReceiver {
 
     public final static String CUSTOM_ANDROID_NET_CHANGE_ACTION
-        = "com.github.obsessive.library.net.conn.CONNECTIVITY_CHANGE";
+            = "com.github.obsessive.library.net.conn.CONNECTIVITY_CHANGE";
     private final static String ANDROID_NET_CHANGE_ACTION = "android.net.conn.CONNECTIVITY_CHANGE";
     private final static String TAG = NetStateReceiver.class.getSimpleName();
 
     private static boolean isNetAvailable = false;
     private static NetUtils.NetType mNetType;
     private static ArrayList<NetChangeObserver> mNetChangeObservers
-        = new ArrayList<NetChangeObserver>();
+            = new ArrayList<NetChangeObserver>();
     private static BroadcastReceiver mBroadcastReceiver;
 
 
@@ -43,7 +45,7 @@ public class NetStateReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         mBroadcastReceiver = NetStateReceiver.this;
         if (intent.getAction().equalsIgnoreCase(ANDROID_NET_CHANGE_ACTION) ||
-            intent.getAction().equalsIgnoreCase(CUSTOM_ANDROID_NET_CHANGE_ACTION)) {
+                intent.getAction().equalsIgnoreCase(CUSTOM_ANDROID_NET_CHANGE_ACTION)) {
             if (!NetUtils.isNetworkAvailable(context)) {
                 Logger.i(TAG, "<--- network disconnected --->");
                 isNetAvailable = false;

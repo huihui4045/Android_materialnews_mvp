@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
 import com.github.hyr0318.baselibrary.R;
 import com.github.hyr0318.baselibrary.view.BaseView;
 import com.jaeger.library.StatusBarUtil;
@@ -19,11 +20,9 @@ public abstract class BaseActivity extends BaseAppCompatActivity implements Base
 
     protected Toolbar mToolbar;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
 

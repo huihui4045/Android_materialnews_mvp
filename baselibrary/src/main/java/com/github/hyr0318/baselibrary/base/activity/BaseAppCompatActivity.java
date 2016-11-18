@@ -85,7 +85,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     }
 
 
-    protected abstract void getViewById();
+
 
 
     @Override
@@ -113,7 +113,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
             EventBus.getDefault().unregister(this);
         }
     }
-
+    protected abstract void getViewById();
 
     protected abstract View getLoadingView();
 
